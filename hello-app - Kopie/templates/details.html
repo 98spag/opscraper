@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'CSS/details.css') }}">
+    <title>spag7 Team Analyzer</title>
+    <h1>spag7 Team Analyzer</h1>
+</head>
+
+
+
+<body>
+ <legend id = "details"> Details (click Player name)</legend>
+  <div id = "container2">
+      <p id = items>
+
+    {% if Players[0] %}
+    <a href="#item1">{{Players[0]}}</a>
+    {% endif %}
+    {% if Players[1] %}
+    <a href="#item2">{{Players[1]}}</a>
+    {% endif %}
+    {% if Players[2] %}
+    <a href="#item3">{{Players[2]}}</a>
+    {% endif %}
+    {% if Players[3] %}
+    <a href="#item4">{{Players[3]}}</a>
+    {% endif %}
+    {% if Players[4] %}
+    <a href="#item5">{{Players[4]}}</a>
+    {% endif %}
+    <a href="#default">Clear</a>
+
+<div class="items">
+  <p id="item1">
+    <label>Flex Rank (5v5)</label>
+    <input  value = {{ ranks_flex[Players[0]] | tojson }} disabled><br>
+    <label>Win Ratio SoloQ</label>
+    <input  value = {{ win_ratio_soloq[Players[0]] | tojson }} disabled><br>
+    <label>Win Ratio Flex</label>
+    <input  value = {{ win_ratio_flexi[Players[0]] | tojson }} disabled><br>
+
+
+    <p id="item2">
+    <label>Flex Rank (5v5)</label>
+    <input  value = {{ ranks_flex[Players[1]] | tojson }} disabled><br>
+    <label>Win Ratio SoloQ</label>
+    <input  value = {{ win_ratio_soloq[Players[1]] | tojson }} disabled><br>
+    <label>Win Ratio Flex</label>
+    <input  value = {{ win_ratio_flexi[Players[1]] | tojson }} disabled><br>
+
+
+    <p id="item3">
+    <label>Flex Rank (5v5)</label>
+    <input  value = {{ ranks_flex[Players[2]] | tojson }} disabled><br>
+    <label>Win Ratio SoloQ</label>
+    <input  value = {{ win_ratio_soloq[Players[2]] | tojson }} disabled><br>
+    <label>Win Ratio Flex</label>
+    <input  value = {{ win_ratio_flexi[Players[2]] | tojson }} disabled><br>
+
+    <p id="item4">
+    <label>Flex Rank (5v5)</label>
+    <input  value = {{ ranks_flex[Players[3]] | tojson }} disabled><br>
+    <label>Win Ratio SoloQ</label>
+    <input  value = {{ win_ratio_soloq[Players[3]] | tojson }} disabled><br>
+    <label>Win Ratio Flex</label>
+    <input  value = {{ win_ratio_flexi[Players[3]] | tojson }} disabled><br>
+
+
+    <p id="item5">
+    <label>Flex Rank (5v5)</label>
+    <input  value = {{ ranks_flex[Players[4]] | tojson }} disabled><br>
+    <label>Win Ratio SoloQ</label>
+    <input  value = {{ win_ratio_soloq[Players[4]] | tojson }} disabled><br>
+    <label>Win Ratio Flex</label>
+    <input  value = {{ win_ratio_flexi[Players[4]] | tojson }} disabled><br>
+
+
+  <p id="default"><!-- Standardmässig wird kein Text angezeigt -->
+</div>
+  </div>
+
+</body>
+</html>
