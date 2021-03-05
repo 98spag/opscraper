@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "de">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'CSS/new.css') }}">
+    <title>spag7 Team Analyzer</title>
+    <h1>spag7 Team Analyzer</h1>
+</head>
+
+<body>
+
+        <div id = container>
+            <div id = "form_container">
+                <form method="POST">
+                    <legend id = "form_legend"> Solo Rank</legend>
+                    <legend id = "most_played_legend"> Most Played</legend>
+                    <div class="row">
+                        <div class = "col">
+                            {% if Players[0]  %}
+                            <label>{{Players[0]}}</label> <br>
+                            {% endif %}
+                            {% if Players[1] %}
+                            <label>{{Players[1]}}</label> <br>
+                            {% endif %}
+                            {% if Players[2] %}
+                            <label>{{Players[2]}}</label> <br>
+                            {% endif %}
+                            {% if Players[3] %}
+                            <label>{{Players[3]}}</label> <br>
+                            {% endif %}
+                            {% if Players[4] %}
+                            <label>{{Players[4]}}</label> <br>
+                            {% endif %}
+                        </div>
+                        <div class = "col">
+                            <input  value = {{ ranks[Players[0]] | tojson }} disabled><br>
+                            <input  value = {{ ranks[Players[1]] | tojson }} disabled><br>
+                            <input  value = {{ ranks[Players[2]] | tojson }} disabled><br>
+                            <input  value = {{ ranks[Players[3]] | tojson }} disabled><br>
+                            <input  value = {{ ranks[Players[4]] | tojson }} disabled><br>
+                        </div>
+                        <div class = "col">
+                            <input  value = {{ most_played[Players[0]] | tojson }} disabled><br>
+                            <input  value = {{ most_played[Players[1]] | tojson }} disabled><br>
+                            <input  value = {{ most_played[Players[2]] | tojson }} disabled><br>
+                            <input  value = {{ most_played[Players[3]] | tojson }} disabled><br>
+                            <input  value = {{ most_played[Players[4]] | tojson }} disabled><br>
+                        </div>
+                    </div>
+                </form>
+                 <a href=details><button>get more details</button></a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    <p><img src = "{{ url_for('static', filename='Ape.jpg') }}"alt="Affenjungs INC" height="400" width = "500" /></p>
+
+
+
+
+</body>
+</html>
