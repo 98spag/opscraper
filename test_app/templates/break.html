@@ -9,9 +9,15 @@
     <div class="alert">
         <strong>{{nonvalid}}</strong> is not found on op.gg
     </div>
+    <script type = "text/javascript">
+     function loading(){
+            document.getElementById("loading").innerHTML = "Loading...";
+        }
+    </script>
 </head>
 
 <body>
+    <div id = "loading" class = "loader"></div>
  <div id = "container">
     <div id = "form_container">
         <form method = "POST">
@@ -31,7 +37,7 @@
                 <input id = "player5" name="Player5"> <br>
                 </div>
             </div>
-                <button>confirm</button>
+                <button onclick=loading();>confirm</button>
 
         </form>
     </div>
