@@ -9,7 +9,10 @@
     <h2 id = "loading"></h2>
     <script type  = "text/javascript">
         function loading(){
-            document.getElementById("loading").innerHTML = "Loading......"
+            document.getElementById("loading").innerHTML = "Loading..."
+        }
+        function preloader(){
+            document.getElementById("loading_animation").style.display = "inline-block";
         }
     </script>
 </head>
@@ -34,7 +37,7 @@
                         <input id = "player5" name="Player5"> <br>
                         </div>
                     </div>
-                        <a><button onclick = loading();>confirm</button></a>
+                        <a><button onclick = loading(), preloader();>confirm</button></a>
 
 
                 </form>
