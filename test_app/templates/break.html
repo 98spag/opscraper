@@ -6,13 +6,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename= 'CSS/page1.css') }}">
     <title>spag7 Team Analyzer</title>
     <h1>spag7 Team Analyzer</h1>
-    <div class="alert">
+    <div id = "alert" class="alert">
         <strong>{{nonvalid}}</strong> is not found on op.gg
     </div>
     <script type = "text/javascript">
      function loading(){
             document.getElementById("loading").innerHTML = "Loading...";
         }
+    function hidealert(){
+        document.getElementById("alert").style.display = "none";
+    }
     </script>
 </head>
 
@@ -37,7 +40,7 @@
                 <input id = "player5" name="Player5"> <br>
                 </div>
             </div>
-                <button onclick=loading();>confirm</button>
+                <button onclick=loading(), hidealert();>confirm</button>
 
         </form>
     </div>
